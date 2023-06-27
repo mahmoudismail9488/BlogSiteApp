@@ -1,0 +1,12 @@
+<%-include("/header")-%>
+    <h1>Home</h1>
+    <p><%=home_text%></p>
+
+<% my_post_data.forEach(function(post){%>
+    <h1><%=post.title%></h1>
+    <p><%=post.data.substring(0,100)%>
+        <a href = "/posts/<%=post.title%>">...Read more</a>
+    </p>
+<%});%>
+
+<%-include("/footer")-%>
